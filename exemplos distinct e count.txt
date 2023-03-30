@@ -1,0 +1,41 @@
+-- Exemplos
+select count(*)
+from medicos;
+
+ 
+
+select count(*)
+from medicos
+where especialidade = 'pediatra' and cidade = 'bauru' and salario > 3000 and dtadm >= '2014/01/01';
+
+ 
+
+select medico, especialidade, cidade, salario, dtadm
+from medicos
+where especialidade = 'pediatra' and cidade = 'bauru' and salario > 3000 and dtadm >= '2014/01/01';
+
+ 
+
+select count(*)
+from medicos
+where     (especialidade = 'pediatra' or especialidade = 'ortopedista') and
+        (cidade = 'bauru' or cidade = 'lins') and 
+        (salario > 3000 and salario < 10000) and 
+        (dtadm >= '2014/01/01' and dtadm <= '2020/12/31');
+        
+select medico, especialidade, cidade, salario, dtadm
+from medicos
+where     (especialidade = 'pediatra' or especialidade = 'ortopedista') and
+        (cidade = 'bauru' or cidade = 'lins') and 
+        (salario > 3000 and salario < 10000) and 
+        (dtadm >= '2014/01/01' and dtadm <= '2020/12/31');
+
+ 
+
+select count(distinct(especialidade))
+from medicos;
+
+ 
+
+select distinct(especialidade)
+from medicos;
